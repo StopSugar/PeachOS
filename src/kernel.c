@@ -47,8 +47,7 @@ void terminal_backspace()
     }
 
     terminal_col -=1;
-    terminal_writechar(' ', 15);
-    terminal_col -=1;
+    terminal_putchar(terminal_col, terminal_row, ' ', 15);
 }
 
 void terminal_writechar(char c, char colour)
